@@ -25,11 +25,14 @@ To prepare the data for modeling:
 ###  Handling Imbalance
 To address the lack of "Yes" samples, I applied **SMOTE (Synthetic Minority Over-sampling Technique)**. This balanced the training set artificially, allowing the models to learn the specific characteristics of employees who are likely to resign.
 
-###  Machine Learning Models
+### Machine Learning Models & Optimization
 The following algorithms were implemented and compared:
 * **Logistic Regression**
 * **Random Forest Classifier**
-* **XGBoost**
+* **XGBoost** <br>
+
+**Hyperparameter Tuning:** I utilized *GridSearchCV* to fine-tune the models. By testing various combinations of hyperparameters, I ensured that the models were not just using default values but were optimized specifically for this dataset's characteristics.
+
 
 ---
 
@@ -44,3 +47,4 @@ The implementation of **SMOTE** proved to be a turning point. After balancing th
 The final trained model is deployed as an interactive web application built with **Streamlit**. 
 * **Input:** Users can manually input specific employee metrics.
 * **Output:** The app provides a real-time prediction and probability score for attrition risk.
+
